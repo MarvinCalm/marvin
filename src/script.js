@@ -82,6 +82,11 @@ ScrollReveal().reveal('.btn-social-grad', {
     distance: '50%',
     reset: true
 });
+ScrollReveal().reveal('.curriculo', {
+    duration: 7000,
+    delay: 2000,
+    reset: true
+});
 
 
 ScrollReveal().reveal('footer', {
