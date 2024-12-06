@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
+:root {
+    --color-blue-dark: #09102a;
+    --color-brown: #554c47;
+    --color-white-grey: #e8faff;
+    --color-grey-ish: #ececec80;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;        
+    background: var(--color-blue-dark);
+    font-family: "Lexend Deca", sans-serif;
+    overflow: hidden;
+    
+    
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    
+}
+
+
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* START HEADER */
+
+#header {        
+    background-color: transparent; 
+         
+    
+}
+
+#header.active {
+    background-color: var(--color-blue-dark);
+    width: 100%;
+    height: 100vw;
+    position: fixed;
+    z-index: 999;
+    
+}   
+/* START HEADER */
+
+/* START NAVIGATION */
+#nav-bar a {
+    text-decoration: none;
+    color: var(--color-white-grey);
+    font-size: 2.5rem;
+    
+    
+}
+#nav-bar a:hover {
+    color: rgb(215, 224, 255);
+    text-shadow: 4px 4px 15px rgba(128, 151, 228, 0.4);     
+    
+}
+#nav-bar .nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+#nav-bar {
+    margin: 0 auto; 
+    width: 100%;    
+    justify-items: center;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+#nav-bar.active {
+    display: block;
+    transform: translate(0, 130%);
+    opacity: 100%;    
+    visibility: visible;      
+    
+}
+/* END NAVIGATION */
+
+
+/* START BUTTONS */
+#button__bar {    
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 45px;
+    margin: 40px 40px;
+    border: 0;
+    background: transparent;
+    padding: 20px;
+
+}
+
+
+#button__bar:hover {
+    cursor: pointer;   
+
+}
+
+#button__bar span {
+    width: 30px;
+    height: 4px;
+    background: var(--color-white-grey);
+    border-radius: 20px;
+    transition: all .9s ease;
+    
+}
+#button__bar.active span {
+    background: var(--color-white-grey);
+    
+}
+#button__bar:hover span  {
+    background: var(--color-grey-ish);
+}
+#button__bar.active span:nth-child(2) {
+    opacity: 0;
+    width: 0px;
+}
+#button__bar.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-10px, 3px);
+}
+#button__bar.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -3px);
+}
+/* END BUTTONS */
+
+/* STAR BUTTONS SOCIAL */
+
+#home .btn-social-grad {
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    
+    
+    /* border-right: 3px solid var(--color-blue-dark);
+    border-left: 3px solid var(--color-blue-dark); */
+}
+
+#home .btn-social {    
+    border: none;
+    background: transparent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#home .btn-social i {
+    color: var(--color-white-grey);
+    font-size: 40px;
+    padding: 10px;
+
+    
+}
+#home .btn-social i:hover {
+    /* color: var(--color-brown); */
+    transition: all .3s ease-in-out;
+    transform: scale(1.05);
+    text-shadow: 4px 4px 15px rgba(209, 207, 203, 0.479);
+}
+
+/* END BUTTONS SOCIAL */
+
+
+
+/* START HOME */
+main {    
+    margin: 0;
+    padding: 0;
+}
+
+
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;    
+    align-items: center;
+    justify-content: center;
+    background: url(../img/background.svg) center center;
+    background-size: cover;
+    
+}
+
+
+#home .profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin: 25px;    
+    
+}
+
+#home .profile-title h1 {
+    font-size: 2rem;
+    color: var(--color-white-grey);
+    /* animation: move-one 2s alternate ease; */
+    
+}
+#home .profile-title span {
+    font-size: 3.5rem;
+    color: var(--color-white-grey);
+    
+    
+}
+
+#home .profile-title h2 {
+    font-size: 1.5rem;
+    font-weight: normal;    
+    color: var(--color-white-grey);
+    margin-top: 10px;        
+    /* animation: move-two 3.5s ease-in-out alternate; */
+    
+}
+
+footer {
+    background-color: var(--color-white-grey);
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 75px;
+    bottom: 0;
+    position: absolute;
+    border: none;
+}
+
+#footer-items {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    align-items: center;
+    
+    
+    
+}
+#footer-items .logo-marvin {
+    width: 80px;
+    
+ }
+ 
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: var(--color-blue-dark);
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    
+    #home {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 150px;
+        flex-direction: column; 
+    }
+    
+}
