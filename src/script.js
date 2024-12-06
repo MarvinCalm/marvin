@@ -83,8 +83,10 @@ ScrollReveal().reveal('.btn-social-grad', {
     reset: true
 });
 ScrollReveal().reveal('.curriculo', {
+    origin: 'bottom',
     duration: 7000,
     delay: 2000,
+    distance: '50%',
     reset: true
 });
 
