@@ -43,7 +43,7 @@ window.onclick = function (event) {
     }
 };
 
-
+// SCROLL ->
 ScrollReveal().reveal('#header.active', {
     origin: 'top',
     duration: 6000,
@@ -57,12 +57,7 @@ ScrollReveal().reveal('#button__bar', {
     distance: '100%',
     reset: true
 });
-// ScrollReveal().reveal('.profile-pic', {
-//     origin: 'bottom',
-//     duration: 3000,
-//     distance: '30%',
-//     reset: true
-// });
+
 ScrollReveal().reveal('#home', {
     duration: 5000,
     reset: true
