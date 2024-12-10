@@ -52,9 +52,10 @@ ScrollReveal().reveal('#header.active', {
 });
 
 ScrollReveal().reveal('#button__bar', {
-    origin: 'top',
+    // origin: 'top',
     duration: 3000,
-    distance: '100%',
+    delay: 4200,
+    // distance: '100%',
     reset: true
 });
 
@@ -84,13 +85,25 @@ ScrollReveal().reveal('.btn-social-grad', {
 });
 ScrollReveal().reveal('.curriculo', {
     origin: 'bottom',
-    duration: 7000,
-    delay: 2000,
+    duration: 1800,
+    delay: 4000,
     distance: '50%',
     reset: true
 });
-
-
+ScrollReveal().reveal('#email-form', {
+    origin: 'top',
+    duration: 7000,
+    delay: 300,
+    distance: '50%',
+    reset: true
+});
+ScrollReveal().reveal('.about-me', {
+    origin: 'top',
+    duration: 3000,
+    delay: 200,
+    distance: '100%',
+    reset: true
+});
 ScrollReveal().reveal('footer', {
     delay: 3000,
     origin: 'bottom',
@@ -125,4 +138,34 @@ window.addEventListener('wheel', function(event) {
 
     // Faz a rolagem para a seção correspondente
     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
+
+// Inicializa o EmailJS
+(function() {
+    emailjs.init("rRF9IojEKFXzX0Td3"); // Substitua pelo Public Key do EmailJS
+})();
+
+// Função para enviar o formulário
+document.getElementById('email-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Coleta os dados do formulário
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+    };
+
+    // Envia o email usando o EmailJS
+    emailjs.send("service_9fgzu7y", "template_5cxpqtk", formData)
+        .then(function(response) {
+            alert("Email enviado com sucesso!");
+            document.getElementById('email-form').reset(); // Limpa o formulário
+        }, function(error) {
+            alert("Erro ao enviar o email: " + error.text);
+        });
 });

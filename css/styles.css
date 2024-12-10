@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
 
 :root {
     --color-blue-dark: #09102a;
@@ -23,7 +22,7 @@ body {
     width: 100%;
     height: 100%;        
     background: var(--color-blue-dark);
-    font-family: "Lexend Deca", sans-serif;
+    font-family: "Poiret One", sans-serif;
     overflow: hidden;
     
     
@@ -48,7 +47,13 @@ body.no-scroll {
     overflow: hidden;
 }
 
-/* START HEADER */
+main {    
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HEADER INÍCIO*/
 
 #header {        
     background-color: transparent; 
@@ -64,9 +69,9 @@ body.no-scroll {
     z-index: 999;
     
 }   
-/* START HEADER */
+/* HEADER FIM*/
 
-/* START NAVIGATION */
+/* NAVIGATION INÍCIO*/
 #nav-bar a {
     text-decoration: none;
     color: var(--color-white-grey);
@@ -76,7 +81,7 @@ body.no-scroll {
 }
 #nav-bar a:hover {
     color: rgb(215, 224, 255);
-    text-shadow: 4px 4px 15px rgba(128, 151, 228, 0.4);     
+    text-shadow: 4px 5px 10px rgba(255, 255, 255, 0.726);     
     
 }
 #nav-bar .nav-list {
@@ -103,10 +108,10 @@ body.no-scroll {
     visibility: visible;      
     
 }
-/* END NAVIGATION */
+/* NAVIGATION FIM*/
 
 
-/* START BUTTONS */
+/* BUTTONS INÍCIO*/
 #button__bar {    
     display: flex;
     flex-direction: column;
@@ -153,15 +158,14 @@ body.no-scroll {
 #button__bar.active span:nth-child(3) {
     transform: rotate(45deg) translate(-9px, -3px);
 }
-/* END BUTTONS */
+/* BUTTONS FIM*/
 
-/* STAR BUTTONS SOCIAL */
 
-#home .btn-social-grad {
-    
+/* BUTTONS SOCIAL INÍCIO*/
+
+.btn-social-grad {
     display: flex;
-    flex-direction: column;
-    row-gap: 40px;
+    gap: 55px;
     justify-content: center;
     align-items: center;
     
@@ -170,38 +174,30 @@ body.no-scroll {
     border-left: 3px solid var(--color-blue-dark); */
 }
 
-#home .btn-social {    
+.btn-social {    
     border: none;
     background: transparent;
     justify-content: center;
     display: flex;
     align-items: center;
 }
-#home .btn-social i {
+.btn-social i {
     color: var(--color-white-grey);
     font-size: 40px;
     padding: 10px;
     transition: all .3s ease-in-out;
-
-    
 }
-#home .btn-social i:hover {
+
+.btn-social i:hover {
     text-shadow: 4px 4px 25px rgba(209, 207, 203, 0.479);
 }
 
-/* END BUTTONS SOCIAL */
+/* BUTTONS SOCIAL FIM*/
 
-
-
-/* START HOME */
-main {    
-    margin: 0;
-    padding: 0;
-}
-
-
+/* HOME INÍCIO*/
 #home {
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 40px;    
@@ -221,15 +217,20 @@ main {
     
 }
 
+
 #home .profile-title h1 {
     font-size: 2rem;
     color: var(--color-white-grey);
-    /* animation: move-one 2s alternate ease; */
+    text-shadow: 5px 5px 4px rgb(0, 0, 0);
+    
+   
     
 }
 #home .profile-title span {
     font-size: 3.5rem;
     color: var(--color-white-grey);
+    font-weight: 700;
+    text-shadow: 5px 5px 4px rgb(0, 0, 0);
     
     
 }
@@ -239,19 +240,179 @@ main {
     font-weight: normal;    
     color: var(--color-white-grey);
     margin-top: 10px;        
-    /* animation: move-two 3.5s ease-in-out alternate; */
+    font-weight: 200;
+    font-family: "Montserrat", serif;
+    text-shadow: 5px 5px 4px rgb(0, 0, 0);
     
 }
-.cv {
-    width: 80px;
+/* HOME FIM */
+
+/* SOBRE MIM INÍCIO*/
+#about .curriculo {
+    border-radius: 50px;
+    background-color: #e8faff;
+    margin: 20px 120px 5px 120px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+#about .curriculo a {
+    color: var(--color-blue-dark);
+    text-decoration: none;
+    list-style: none;
     transition: all .3s ease-in-out;
-    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
 }
-.cv:hover {
-    transform: scale(1.08);
-    
+.curriculo i {
+    color: var(--color-blue-dark);
 }
 
+#about .curriculo a:hover {
+    transform: scale(1.05);
+}
+
+
+#about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;    
+    align-items: center;
+    justify-content: center;
+    background: url(../img/background.svg) center center;
+    background-size: cover;
+}
+.about-me{
+    display: flex;
+    background-color: #09102abe;
+    margin: 0 170px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    overflow: hidden;
+    padding: 0;
+}
+.pic-profile {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+}
+.profile-celphone {
+    display: none;
+}
+.about-text {
+    margin: 0 40px;
+}
+#about p {
+    justify-content: center;
+    color: var(--color-white-grey);
+    font-size: 21px;
+    line-height: 1.6;
+    text-align: justify;
+    font-weight: 400;
+    text-indent: 20px;
+    font-family: "Montserrat", serif;
+    
+}
+.indent-p {
+    font-size: 30px;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
+}
+
+/* SOBRE MIM FIM*/
+
+
+/* CONTATO INÍCIO*/
+#contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;    
+    align-items: center;
+    justify-content: center;
+    background: url(../img/background.svg) center center;
+    background-size: cover;
+    font-family: "Montserrat", serif;
+}
+
+#contact .contact-text h1, h2 {
+    color: var(--color-white-grey);
+    font-size: 30px;
+}
+#contact .contact-text i {
+    margin: 20px;
+    font-size: 35px;
+    color: var(--color-white-grey);
+    transition: all .3s ease-in-out;
+}
+#contact .contact-text i:hover {
+    text-shadow: 4px 4px 25px rgba(209, 207, 203, 0.479);
+}
+/* CONTATO FIM*/
+
+/* FORMS INÍCIO*/
+.email-form {
+    background: #ffffffa4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+.email-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--color-blue-dark);
+}
+.email-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-blue-dark);
+}
+.email-form input,
+.email-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-white-grey);
+    border-radius: 5px;
+    font-size: 15px;
+}
+.email-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white-grey);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.email-form button:hover {
+    background-color: #0e4e92;
+}
+#message {
+    height: 251px;
+    width: 840px;; /* Limita a altura máxima */
+    resize: none;
+    font-size: 17px;
+    overflow-y: auto; /* Adiciona rolagem interna */
+}
+
+/* FORMS FIM*/
+
+
+/* FOOTER INÍCIO*/
 footer {
     background-color: var(--color-white-grey);
     box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
@@ -283,11 +444,12 @@ footer {
     align-items: center;
     gap: 40px;
     color: var(--color-blue-dark);
+    font-family: "Montserrat", serif;
 }
+/* FOOTER FIM */
 
-
-
-@media screen and (max-width: 1280px) {
+/* RESPONSIVIDADE INÍCIO*/
+@media screen and (max-width: 1480px) {
     #header.active {
         height: 100%;
     }
@@ -319,6 +481,9 @@ footer {
         width: 50px;
         
     }
+    .profile-title h1 span i {
+        font-size: 1.8rem;
+    }
 
     #home .profile-title h1 {
         font-size: 1.5rem;
@@ -326,7 +491,7 @@ footer {
         
     }
     #home .profile-title span {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
            
     }
     
@@ -335,10 +500,103 @@ footer {
         
     }
 
-    #home .btn-social i {
+    .btn-social i {
         font-size: 30px;
     }
-    .cv {
-        width: 60px;
+    .btn-social-grad {
+        gap: 35px;
     }
+    .cv {
+        width: 65px;
+    }
+    /* FORMULÁRIO */
+    .email-form {
+        margin-top: 20px;
+        max-width: 90%;
+        max-height: 70%;
+        padding: 10px;
+    }
+    .email-form h1 {
+        font-size: 1rem;
+    }   
+    .email-form input,
+    .email-form textarea {
+        width: 100%;        
+        font-size: .8rem;
+    }
+    .email-form button {
+        width: 100%;        
+        font-size: .8rem;
+    }
+    #message {
+        height: 25%;
+        width: 100%; /* Limita a altura máxima */
+        resize: none;
+        font-size: .9rem;
+        overflow-y: auto; /* Adiciona rolagem interna */
+        margin-bottom: 8px;
+    }
+
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        margin: 0;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        /* overflow: hidden; */
+        padding: 0;
+        background-color: #09102adc;
+        padding: 0 10px;
+        border-radius: 6px;
+        
+
+    }
+    .profile-celphone {
+        display: inline-flex;
+        width: 80px;
+        /* max-height: 100px; */
+    }
+    .pic-profile {
+        display: none;
+    }
+    
+    .about-text {
+        margin: 0;
+        
+    }
+    #about p {
+        justify-content: center;
+        color: var(--color-white-grey);
+        font-size: 13px;
+        line-height: 1.6;
+        text-align: justify;
+        font-weight: 500;
+        text-indent: 10px;
+        
+        
+    }
+    .indent-p {
+        font-size: 16px;
+    }
+
+    #about .curriculo {
+        padding: 4px;
+        gap: 20px;
+        display: flex;
+        margin: 20px 0;
+        background-color: #e8faff;
+    }
+    #about .curriculo a {
+        color: var(--color-blue-dark);
+        font-weight: 700;        
+        font-size: 16px;
+    }
+    .curriculo i {
+        color: var(--color-blue-dark);
+    }
+    
 }
+/* RESPONSIVIDADE FIM */
