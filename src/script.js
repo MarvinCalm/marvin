@@ -53,8 +53,8 @@ ScrollReveal().reveal('#header.active', {
 
 ScrollReveal().reveal('#button__bar', {
     // origin: 'top',
-    duration: 3000,
-    delay: 4200,
+    duration: 2000,
+    delay: 3200,
     // distance: '100%',
     reset: true
 });
@@ -86,14 +86,14 @@ ScrollReveal().reveal('.btn-social-grad', {
 ScrollReveal().reveal('.curriculo', {
     origin: 'bottom',
     duration: 1800,
-    delay: 4000,
+    delay: 3500,
     distance: '50%',
     reset: true
 });
 ScrollReveal().reveal('#email-form', {
     origin: 'top',
-    duration: 7000,
-    delay: 300,
+    duration: 4000,
+    delay: 200,
     distance: '50%',
     reset: true
 });

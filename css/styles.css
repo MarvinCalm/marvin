@@ -462,6 +462,10 @@ footer {
         right: 30px;
         margin: 40px 10px;
     }
+    #button__bar:hover span  {
+        background: var(--color-white-grey);
+    }
+    
 
     #footer-items {
         justify-content: center;
